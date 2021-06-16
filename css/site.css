@@ -1,0 +1,122 @@
+:root {
+  --canvas: #0D1821;
+  --primary: #4CE0B3;
+  --secondary: #EA3546;
+  --tertiary: var(--primary);
+}
+
+body {
+  align-items: center;
+  background-color: var(--canvas);
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  justify-content: center;
+}
+
+.loader {
+  height: 100px;
+  position: relative;
+  width: 100px;
+}
+
+.loader .circle-wrap {
+  position: absolute;
+}
+
+.circle-wrap {
+  animation: spin 1.3s linear infinite;
+  height: 100%;
+  width: 100%;
+}
+
+.circle-wrap--small {
+  height: 40%;
+  width: 40%;
+  margin: 30%;
+}
+
+.circle-wrap--medium {
+  height: 70%;
+  width: 70%;
+  margin: 15%;
+}
+
+.circle-wrap--ease {
+  animation-timing-function: ease-in-out;
+}
+
+.circle-wrap--reverse {
+  animation-name: spin-reverse;
+}
+
+.half-circle {
+  align-items: flex-end;
+  background-color: transparent;
+  border: 0.5rem solid var(--canvas);
+  border-bottom-left-radius: 1000px;
+  border-right: none;
+  border-top-left-radius: 1000px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.half-circle::before,
+.half-circle::after {
+  background-color: var(--canvas);
+  border-bottom-right-radius: 1000px;
+  border-top-right-radius: 1000px;
+  content: "";
+  height: 0.5rem;
+  left: 100px;
+  margin-right: -0.25rem;
+  margin-top: -0.5rem;
+  width: 0.25rem;
+}
+
+.half-circle::after {
+  margin-bottom: -0.5rem;
+}
+
+.half-circle.half-circle--tertiary {
+  border-color: var(--tertiary);
+}
+
+.half-circle.half-circle--tertiary::before,
+.half-circle.half-circle--tertiary::after {
+  background-color: var(--tertiary);
+}
+
+.half-circle.half-circle--secondary {
+  border-color: var(--secondary);
+}
+
+.half-circle.half-circle--secondary::before,
+.half-circle.half-circle--secondary::after {
+  background-color: var(--secondary);
+}
+
+.half-circle.half-circle--primary {
+  border-color: var(--primary);
+}
+
+.half-circle.half-circle--primary::before,
+.half-circle.half-circle--primary::after {
+  background-color: var(--primary);
+}
+
+@keyframes spin {
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  100% { 
+    transform: rotate(-360deg);
+  }
+}
