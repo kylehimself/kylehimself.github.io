@@ -44,7 +44,7 @@ main {
 }
 
 .circle-wrap {
-  animation: spin 1.3s linear infinite;
+  animation: spin 3s linear infinite;
   height: 100%;
   width: 100%;
 }
@@ -67,6 +67,10 @@ main {
 
 .circle-wrap--reverse {
   animation-name: spin-reverse;
+}
+
+.circle-wrap--fast {
+  animation-duration: 2s;
 }
 
 .half-circle {
