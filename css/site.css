@@ -66,7 +66,7 @@ main {
 }
 
 .circle-wrap--reverse {
-  animation-name: spin-reverse;
+  animation-direction: reverse;
 }
 
 .circle-wrap--fast {
@@ -156,11 +156,5 @@ main {
 @keyframes spin {
   100% { 
     transform: rotate(360deg);
-  }
-}
-
-@keyframes spin-reverse {
-  100% { 
-    transform: rotate(-360deg);
   }
 }
