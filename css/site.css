@@ -2,8 +2,8 @@
 
 :root {
   --canvas: #051929;
-  --primary: #2ab7ca;
-  --secondary: #ee6352;
+  --primary: #00d8f5;
+  --secondary: #fa5c47;
   --tertiary: var(--primary);
   --loader-dimensions: 100px;
 }
