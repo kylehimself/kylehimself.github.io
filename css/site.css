@@ -8,12 +8,6 @@
   --loader-dimensions: 100px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --canvas: #e6e6e6;
-  }
-}
-
 body {
   align-items: center;
   background-color: var(--canvas);
