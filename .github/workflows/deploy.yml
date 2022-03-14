@@ -20,3 +20,7 @@ jobs:
     - name: Copy files to the test website with the AWS CLI
       run: |
         aws s3 sync . ${{ secrets.AWS_S3_BUCKET }}
+        
+    - name: Create CloudFront invalidation with the AWS CLI
+      run: |
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
